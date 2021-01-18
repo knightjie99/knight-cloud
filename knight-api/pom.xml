@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>knight-cloud</artifactId>
+        <groupId>com.wujie</groupId>
+        <version>1.1.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>knight-api</artifactId>
+    <packaging>pom</packaging>
+    <name>knight-api</name>
+    <modules>
+        <module>knight-api-system</module>
+    </modules>
+    <description>>knight-api系统接口</description>
+
+</project>

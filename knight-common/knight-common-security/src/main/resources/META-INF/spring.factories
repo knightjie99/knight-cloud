@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wujie.common.security.service.TokenService,\
+  com.wujie.common.security.aspect.PreAuthorizeAspect,\
+  com.wujie.common.security.handler.GlobalExceptionHandler

@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.wujie.common.core.utils.SpringUtils
+
+  
