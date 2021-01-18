@@ -11,6 +11,7 @@
     <modules>
         <module>knight-common</module>
         <module>knight-api</module>
+        <module>knight-auth</module>
     </modules>
 
     <name>knight-cloud</name>
