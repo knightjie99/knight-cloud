@@ -6,15 +6,9 @@
 
   <groupId>com.wujie</groupId>
   <artifactId>knight-cloud</artifactId>
-    <packaging>pom</packaging>
-    <version>1.1.1</version>
-    <modules>
-        <module>knight-common</module>
-        <module>knight-api</module>
-        <module>knight-auth</module>
-    </modules>
+  <version>1.1.1</version>
+  <name>knight-cloud</name>
 
-    <name>knight-cloud</name>
   <properties>
     <knight.version>1.1.1</knight.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -218,4 +212,31 @@
     </dependency>
   </dependencies>
   </dependencyManagement>
+
+  <modules>
+    <module>knight-common</module>
+    <module>knight-api</module>
+    <module>knight-auth</module>
+    <module>knight-gateway</module>
+    <module>knight-modules</module>
+  </modules>
+  <packaging>pom</packaging>
+
+  <dependencies>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
