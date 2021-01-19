@@ -1,4 +1,4 @@
-package com.wujie;
+package com.wujie.auth;
 
 import com.wujie.common.security.annotation.EnableRyFeignClients;
 import org.springframework.boot.SpringApplication;

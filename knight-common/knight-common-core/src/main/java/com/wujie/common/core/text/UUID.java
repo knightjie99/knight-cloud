@@ -1,5 +1,6 @@
 package com.wujie.common.core.text;
 
+import java.io.Serializable;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -12,7 +13,7 @@ import com.wujie.common.core.exception.UtilException;
  *
  * @author wujie
  */
-public final class UUID implements java.io.Serializable, Comparable<UUID>
+public final class UUID implements Serializable, Comparable<UUID>
 {
     private static final long serialVersionUID = -1185015143654744140L;
 
