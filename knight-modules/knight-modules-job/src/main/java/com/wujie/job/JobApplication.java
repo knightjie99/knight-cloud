@@ -1,13 +1,23 @@
 package com.wujie.job;
 
+
+import com.wujie.common.security.annotation.EnableCustomConfig;
+import com.wujie.common.security.annotation.EnableRyFeignClients;
+import com.wujie.common.swagger.annotation.EnableCustomSwagger2;
+import org.springframework.boot.SpringApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
+
 /**
- * Hello world!
+ * 定时任务
  *
+ * @author wujie
  */
-public class JobApplication
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+@EnableCustomConfig
+@EnableCustomSwagger2
+@EnableRyFeignClients
+@SpringCloudApplication
+public class JobApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(JobApplication.class, args);
     }
 }

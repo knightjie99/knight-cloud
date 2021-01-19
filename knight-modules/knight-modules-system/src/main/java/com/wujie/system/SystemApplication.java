@@ -1,13 +1,24 @@
 package com.wujie.system;
 
+import com.wujie.common.security.annotation.EnableCustomConfig;
+import com.wujie.common.security.annotation.EnableRyFeignClients;
+import com.wujie.common.swagger.annotation.EnableCustomSwagger2;
+import org.springframework.boot.SpringApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
+
 /**
- * Hello world!
+ * 系统模块
  *
+ * @author wujie
  */
+@EnableCustomConfig
+@EnableCustomSwagger2
+@EnableRyFeignClients
+@SpringCloudApplication
 public class SystemApplication
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        SpringApplication.run(SystemApplication.class, args);
     }
 }
