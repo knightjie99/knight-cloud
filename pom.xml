@@ -219,6 +219,7 @@
     <module>knight-auth</module>
     <module>knight-gateway</module>
     <module>knight-modules</module>
+      <module>knight-visual</module>
   </modules>
   <packaging>pom</packaging>
 
