@@ -43,7 +43,7 @@ public class SwaggerProvider implements SwaggerResourcesProvider
                         .contains(routeDefinition.getId()))
                 .forEach(routeDefinition -> routeDefinition.getPredicates().stream()
                         .filter(predicateDefinition -> "Path".equalsIgnoreCase(predicateDefinition.getName()))
-                        .filter(predicateDefinition -> !"wujie-auth".equalsIgnoreCase(routeDefinition.getId()))
+                        .filter(predicateDefinition -> !"knight-auth".equalsIgnoreCase(routeDefinition.getId()))
                         .forEach(predicateDefinition -> resourceList
                                 .add(swaggerResource(routeDefinition.getId(), predicateDefinition.getArgs()
                                         .get(NameUtils.GENERATED_NAME_PREFIX + "0").replace("/**", SWAGGER2URL)))));

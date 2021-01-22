@@ -1,7 +1,7 @@
 package com.wujie.system;
 
 import com.wujie.common.security.annotation.EnableCustomConfig;
-import com.wujie.common.security.annotation.EnableRyFeignClients;
+import com.wujie.common.security.annotation.EnableMyFeignClients;
 import com.wujie.common.swagger.annotation.EnableCustomSwagger2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
@@ -13,7 +13,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  */
 @EnableCustomConfig
 @EnableCustomSwagger2
-@EnableRyFeignClients
+@EnableMyFeignClients
 @SpringCloudApplication
 public class SystemApplication
 {

@@ -1,6 +1,6 @@
 package com.wujie.auth;
 
-import com.wujie.common.security.annotation.EnableRyFeignClients;
+import com.wujie.common.security.annotation.EnableMyFeignClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 
@@ -9,7 +9,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  *
  * @author wujie
  */
-@EnableRyFeignClients
+@EnableMyFeignClients
 @SpringCloudApplication
 public class AuthApplication
 {

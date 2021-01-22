@@ -35,7 +35,7 @@ spring:
         ds1:
           nacos:
             server-addr: 127.0.0.1:8848
-            dataId: sentinel-wujie-gateway
+            dataId: sentinel-knight-gateway
             groupId: DEFAULT_GROUP
             data-type: json
             rule-type: flow

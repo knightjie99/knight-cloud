@@ -35,7 +35,7 @@ public @interface PreAuthorize
     public String hasRole() default "";
 
     /**
-     * 验证用户是否不具备某角色，与 isRole逻辑相反
+     * 验证用户是否不具备某角色，与 hasRole逻辑相反
      */
     public String lacksRole() default "";
 
