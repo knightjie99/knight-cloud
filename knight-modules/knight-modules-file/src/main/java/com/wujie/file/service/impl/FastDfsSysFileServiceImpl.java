@@ -1,5 +1,6 @@
 package com.wujie.file.service.impl;
 
+import com.wujie.file.service.ISysFileService;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
