@@ -7,7 +7,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.wujie.common.swagger.swagger.SwaggerAutoConfiguration;
+import com.wujie.common.swagger.config.SwaggerAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
 

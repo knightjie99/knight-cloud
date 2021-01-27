@@ -1,4 +1,4 @@
-package com.wujie.common.swagger.swagger;
+package com.wujie.common.swagger.config;
 
 import java.util.ArrayList;
 import java.util.Arrays;
