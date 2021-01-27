@@ -165,7 +165,7 @@
                 <el-tooltip placement="top">
                   <div slot="content">
                     Bean调用示例：ryTask.ryParams('ry')
-                    <br />Class类调用示例：com.wujie.quartz.task.RyTask.ryParams('ry')
+                    <br />Class类调用示例：com.wujie.quartz.task.MyTask.myParams('my')
                     <br />参数说明：支持字符串，布尔类型，长整型，浮点型，整型
                   </div>
                   <i class="el-icon-question"></i>
@@ -266,7 +266,7 @@
 </template>
 
 <script>
-import { listJob, getJob, delJob, addJob, updateJob, exportJob, runJob, changeJobStatus } from "@/api/monitor/job";
+import { listJob, getJob, delJob, addJob, updateJob, runJob, changeJobStatus } from "@/api/monitor/job";
 
 export default {
   name: "Job",
@@ -472,16 +472,9 @@ export default {
     },
     /** 导出按钮操作 */
     handleExport() {
-      const queryParams = this.queryParams;
-      this.$confirm("是否确认导出所有定时任务数据项?", "警告", {
-          confirmButtonText: "确定",
-          cancelButtonText: "取消",
-          type: "warning"
-        }).then(function() {
-          return exportJob(queryParams);
-        }).then(response => {
-          this.download(response.msg);
-        })
+      this.download('schedule/job/export', {
+        ...this.queryParams
+      }, `job_${new Date().getTime()}.xlsx`)
     }
   }
 };

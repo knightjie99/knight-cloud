@@ -1,8 +1,5 @@
 ## 开发
 
-```bash
-# 克隆项目
-git clone https://gitee.com/y_project/WuJie-Vue
 
 # 进入项目目录
 cd knight-ui

@@ -84,7 +84,7 @@
     </el-row>
 
     <el-table v-loading="loading" :data="tableList" @selection-change="handleSelectionChange">
-      <el-table-column type="selection" width="55"></el-table-column>
+      <el-table-column type="selection" align="center" width="55"></el-table-column>
       <el-table-column label="序号" type="index" width="50" align="center">
         <template slot-scope="scope">
           <span>{{(queryParams.pageNum - 1) * queryParams.pageSize + scope.$index + 1}}</span>
@@ -269,7 +269,7 @@ export default {
           this.msgSuccess("成功生成到自定义路径：" + row.genPath);
         });
       } else {
-        downLoadZip("/tool/gen/batchGenCode?tables=" + tableNames, "wujie");
+        downLoadZip("/code/gen/batchGenCode?tables=" + tableNames, "knight");
       }
     },
     /** 同步数据库操作 */

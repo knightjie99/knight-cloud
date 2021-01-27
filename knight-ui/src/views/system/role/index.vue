@@ -248,7 +248,7 @@
 </template>
 
 <script>
-import { listRole, getRole, delRole, addRole, updateRole, exportRole, dataScope, changeRoleStatus } from "@/api/system/role";
+import { listRole, getRole, delRole, addRole, updateRole, dataScope, changeRoleStatus } from "@/api/system/role";
 import { treeselect as menuTreeselect, roleMenuTreeselect } from "@/api/system/menu";
 import { treeselect as deptTreeselect, roleDeptTreeselect } from "@/api/system/dept";
 
@@ -276,7 +276,7 @@ export default {
       open: false,
       // 是否显示弹出层（数据权限）
       openDataScope: false,
-      menuExpand: false,
+	  menuExpand: false,
       menuNodeAll: false,
       deptExpand: true,
       deptNodeAll: false,
@@ -431,7 +431,7 @@ export default {
       if (this.$refs.menu != undefined) {
         this.$refs.menu.setCheckedKeys([]);
       }
-      this.menuExpand = false,
+	  this.menuExpand = false,
       this.menuNodeAll = false,
       this.deptExpand = true,
       this.deptNodeAll = false,
@@ -443,8 +443,8 @@ export default {
         status: "0",
         menuIds: [],
         deptIds: [],
-        menuCheckStrictly: true,
-        deptCheckStrictly: true,
+		menuCheckStrictly: true,
+		deptCheckStrictly: true,
         remark: undefined
       };
       this.resetForm("form");
@@ -466,7 +466,7 @@ export default {
       this.single = selection.length!=1
       this.multiple = !selection.length
     },
-    // 树权限（展开/折叠）
+	// 树权限（展开/折叠）
     handleCheckedTreeExpand(value, type) {
       if (type == 'menu') {
         let treeList = this.menuOptions;
@@ -583,16 +583,9 @@ export default {
     },
     /** 导出按钮操作 */
     handleExport() {
-      const queryParams = this.queryParams;
-      this.$confirm('是否确认导出所有角色数据项?', "警告", {
-          confirmButtonText: "确定",
-          cancelButtonText: "取消",
-          type: "warning"
-        }).then(function() {
-          return exportRole(queryParams);
-        }).then(response => {
-          this.download(response.msg);
-        })
+      this.download('system/role/export', {
+        ...this.queryParams
+      }, `role_${new Date().getTime()}.xlsx`)
     }
   }
 };

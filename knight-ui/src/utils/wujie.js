@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 通用js方法封装处理
  * Copyright (c) 2019 wujie
  */
@@ -87,8 +87,8 @@ export function selectDictLabels(datas, value, separator) {
 	var currentSeparator = undefined === separator ? "," : separator;
 	var temp = value.split(currentSeparator);
 	Object.keys(value.split(currentSeparator)).some((val) => {
-		Object.keys(datas).some((key) => {
-			if (datas[key].dictValue == ('' + temp[val])) {
+        Object.keys(datas).some((key) => {
+            if (datas[key].dictValue == ('' + temp[val])) {
 				actions.push(datas[key].dictLabel + currentSeparator);
 			}
 		})
@@ -149,4 +149,18 @@ export function handleTree(data, id, parentId, children, rootId) {
 		return father[parentId] === rootId;
 	});
 	return treeData != '' ? treeData : data;
+}
+
+  /**
+   * 参数处理
+   * @param {*} params  参数
+   */
+export function tansParams(params) {
+	let result = ''
+	Object.keys(params).forEach((key) => {
+		if (!Object.is(params[key], undefined) && !Object.is(params[key], null) && !Object.is(JSON.stringify(params[key]), '{}')) {
+			result += encodeURIComponent(key) + '=' + encodeURIComponent(params[key]) + '&'
+		}
+	})
+	return result
 }
