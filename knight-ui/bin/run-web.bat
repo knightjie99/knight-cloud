@@ -1,6 +1,6 @@
 @echo off
 echo.
-echo [пео╒] й╧сц Vue ткпп Web ╧╓Ёл║ё
+echo [Д©║Ф│╞] Д╫©Г■╗ Vue Х©░Х║▄ Web Е╥╔Г╗▀Ц─┌
 echo.
 
 %~d0
