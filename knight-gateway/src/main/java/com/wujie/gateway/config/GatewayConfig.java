@@ -16,6 +16,7 @@ import com.wujie.gateway.handler.SentinelFallbackHandler;
 @Configuration
 public class GatewayConfig
 {
+    //配置限流异常处理器
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public SentinelFallbackHandler sentinelGatewayExceptionHandler()
@@ -23,6 +24,7 @@ public class GatewayConfig
         return new SentinelFallbackHandler();
     }
 
+    //初始化一个限流过滤器
     @Bean
     @Order(-1)
     public GlobalFilter sentinelGatewayFilter()
